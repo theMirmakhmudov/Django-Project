@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
+<html>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
 <body>
-    <h1>Siz HomePage dasiz!</h1>
-<button><a href="about">About</a></button>
+
+<h2>User data in Student</h2>
+
+<table style="width:100%">
+
+    {% for data in dataset %}
+
+        <tr>
+            <th>{{ data.name }}</th>
+        </tr>
+        <tr>
+            <td>{{ data.address }}</td>
+        </tr>
+        <tr>
+            <td>{{ data.age }}</td>
+
+        </tr>
+    {% endfor %}
+        
+</table>
+
+
 </body>
 </html>
